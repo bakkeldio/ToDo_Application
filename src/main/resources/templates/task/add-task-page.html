@@ -12,7 +12,7 @@
           crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{style.css}"/>
 </head>
 <body>
 
@@ -37,12 +37,12 @@
                                th:field="*{id}" placeholder="id">
                         <input
                                 size="30" class="form-control" type="text"
-                                th:field="*{description}" placeholder="Tytuł testu">
+                                th:field="*{description}" placeholder="Test title">
 
                         <br>
                         <br>
                     </div>
-                    <button class="btn btn-primary auto-margin" type="submit">Zapisz</button>
+                    <button class="btn btn-primary auto-margin" type="submit">Save</button>
 
                 </form>
 

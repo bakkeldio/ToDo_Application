@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import javax.validation.Valid;
 
 import com.example.demo.entity.User;

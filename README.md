@@ -45,10 +45,12 @@ By default, the application uses the embedded <b>Tomcat</b> server, which is pro
 ToDoApp uses <b><i>Thymeleaf</b></i> to manage templates. All images were downloaded from <a href="https://www.flaticon.com/home">flaticon</a>. <b><i>Bootstrap</b></i> was used to style the application. Below are several screenshots presenting the appearance of the application:
 
 <br>
+<b>Home Page</b>
 <br>
 
-![](screenshots/1.PNG)
+![](screenshots/firstScreen.png)
 
 <br>
+<b>Registration</b>
 
-![](screenshots/2.PNG)
+![](screenshots/second.png)

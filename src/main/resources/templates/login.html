@@ -12,7 +12,7 @@
           crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{style.css}"/>
 </head>
 <body>
 
@@ -35,11 +35,11 @@
                         <div>
 
                             <div th:if="${param.error}" class="alert alert-danger input-group">
-                                Nieprawidłowy login lub hasło.
+                                Incorrect login or password
                             </div>
 
                             <div th:if="${param.logout}" class="alert alert-success input-group">
-                                Zostałeś wylogowany.
+                                You have been logged out.
                             </div>
 
                         </div>
@@ -51,14 +51,14 @@
                 <br>
                 <div class="input-group">
 
-                    <input type="password" size="30" name="password" placeholder="hasło" class="form-control">
+                    <input type="password" size="30" name="password" placeholder="password" class="form-control">
                 </div>
                 <br>
                 <br>
                 <br>
-                <button type="submit" class="btn btn-primary">Zaloguj</button>
+                <button type="submit" class="btn btn-primary">Log in</button>
                 <a th:href="@{/register/showRegistrationForm}" class="btn btn-primary" role="button"
-                   aria-pressed="true">Rejestracja</a>
+                   aria-pressed="true">Registration</a>
             </form>
         </div>
 

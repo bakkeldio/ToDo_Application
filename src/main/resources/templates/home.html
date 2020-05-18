@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
-    <title>luv2code Company Home Page</title>
+    <title>Orozbekov's ToDoApp</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport"
@@ -43,34 +43,34 @@
                         <li class="nav-item active "><a class="nav-link" data-toggle="collapse"
                                                         href="#multiCollapseExample1" role="button"
                                                         aria-expanded="false" aria-controls="multiCollapseExample1"><img
-                                data-toggle="tooltip" data-placement="top" title="Dodaj zadanie" src="img/add-md.png"/></a>
+                                data-toggle="tooltip" data-placement="top" title="Add a task" src="img/add-md.png"/></a>
                         </li>
 
                         <li class="nav-item active "><a class="nav-link" th:href="@{/}"><img data-toggle="tooltip"
                                                                                              data-placement="top"
-                                                                                             title="Pokaż wszyskie"
+                                                                                             title="show all"
                                                                                              src="img/all-md.png"/></a>
                         </li>
 
                         <li class="nav-item active "><a class="nav-link" th:href="@{/showDoneTasks}"><img
-                                data-toggle="tooltip" data-placement="top" title="Zrobione" src="img/done-task-md.png"/></a>
+                                data-toggle="tooltip" data-placement="top" title="done" src="img/done-task-md.png"/></a>
                         </li>
 
                         <li class="nav-item active "><a class="nav-link" th:href="@{/showNotDoneTasks}"><img
-                                data-toggle="tooltip" data-placement="top" title="Do zrobienia"
+                                data-toggle="tooltip" data-placement="top" title="To do"
                                 src="img/notdone-task-md.png"/></a></li>
 
                         <li class="nav-item active "><a class="nav-link" th:href="@{/removeDoneTasks}"><img
-                                data-toggle="tooltip" data-placement="top" title="Usuń wykonane zadania"
+                                data-toggle="tooltip" data-placement="top" title="Delete completed tasks"
                                 src="img/bin-md.png"/></a></li>
 
                         <li class="nav-item active "><a class="nav-link" th:href="@{/sendEmail}"><img
-                                data-toggle="tooltip" data-placement="top" title="Wyślij niewykonane zadania na maila"
+                                data-toggle="tooltip" data-placement="top" title="Send unfinished tasks to the email"
                                 src="img/gmail-md.png"/></a></li>
 
                         <li class="nav-item active nav-link-style">
                             <form th:action="@{/logout}" method="POST">
-                                <input type="image" data-toggle="tooltip" data-placement="top" title="Wyloguj"
+                                <input type="image" data-toggle="tooltip" data-placement="top" title="Log out"
                                        src="img/logout-md.png" border="0" alt="Submit"/>
                             </form>
                         </li>
@@ -94,13 +94,13 @@
                                            th:field="*{id}" placeholder="id">
                                     <input
                                             size="30" class="form-control" type="text"
-                                            th:field="*{description}" placeholder="Nowe zadanie">
+                                            th:field="*{description}" placeholder="A new task">
                                     <br>
                                     <br>
 
 
 
-                                    <button class="btn btn-primary" type="submit">Dodaj zadanie</button>
+                                    <button class="btn btn-primary" type="submit">Add a task</button>
                                 </div>
                             </form>
                             <br>
@@ -123,32 +123,32 @@
             <table class="table table-style">
                 <thead class="">
                 <tr>
-                    <th>Stan</th>
-                    <th>Opis</th>
-                    <th>Akcja</th>
+                    <th>State</th>
+                    <th>Description</th>
+                    <th>Share</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr th:each="task : ${tasks}">
                     <td>
                         <img th:if="${task.state}==1" data-toggle="tooltip" data-placement="top"
-                             title="Zrobione! :)" src="img/task-done-pro-sm.png"/>
+                             title="Done! :)" src="img/task-done-pro-sm.png"/>
                         <img th:if="${task.state}==0" data-toggle="tooltip" data-placement="top"
-                             title="Nie zrobione :(" src="img/task-notdone-pro-sm.png"/>
+                             title="Not done :(" src="img/task-notdone-pro-sm.png"/>
                     </td>
                     <td><a th:text="${task.description}"></a></td>
                     <td>
                         <a th:if="${task.state}==0" th:href="@{/showUpdateTeskPage(taskId=${task.id})}">
-                            <img data-toggle="tooltip" data-placement="top" title="Zmień" src="img/update-pro-sm.png"/>
+                            <img data-toggle="tooltip" data-placement="top" title="Change" src="img/update-pro-sm.png"/>
                         </a>
 
                         <a th:if="${task.state}==0" th:href="@{/setStateToDoneAction(taskId=${task.id})}">
                             <img data-toggle="tooltip" data-placement="top"
-                                 title="Zrobione" src="img/done-pro-sm.png"/>
+                                 title="done" src="img/done-pro-sm.png"/>
                         </a>
 
                         <a th:if="${task.state}==1" th:href="@{/setStateToNotDoneAction(taskId=${task.id})}">
-                            <img data-toggle="tooltip" data-placement="top" title="Przywróć"
+                            <img data-toggle="tooltip" data-placement="top" title="Restore"
                                  src="img/restore-task-pro-sm.png"/>
                         </a>
 

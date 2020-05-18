@@ -34,7 +34,7 @@
                     ${registrationError}
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
-                    <input type="text" th:field="*{userName}" placeholder="nazwa użytkownika" class="form-control"/>
+                    <input type="text" th:field="*{userName}" placeholder="username" class="form-control"/>
                 </div>
                 <div th:if="${#fields.hasErrors('userName')}"
                      style="margin-bottom: 25px" class="text-danger">
@@ -43,7 +43,7 @@
                     </ul>
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
-                    <input type="password" th:field="*{password}" placeholder="hasło" class="form-control"
+                    <input type="password" th:field="*{password}" placeholder="password" class="form-control"
                            th:errorclass="fieldError"/>
                 </div>
                 <div th:if="${#fields.hasErrors('password')}"
@@ -53,7 +53,7 @@
                     </ul>
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
-                    <input type="password" th:field="*{matchingPassword}" placeholder="potwierdź hasło"
+                    <input type="password" th:field="*{matchingPassword}" placeholder="Confirm password"
                            class="form-control" th:errorclass="fieldError"/>
                 </div>
                 <div th:if="${#fields.hasErrors('matchingPassword')}"
@@ -63,7 +63,7 @@
                     </ul>
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
-                    <input type="text" th:field="*{firstName}" placeholder="imię" class="form-control"
+                    <input type="text" th:field="*{firstName}" placeholder="firstName" class="form-control"
                            th:errorclass="fieldError"/>
                 </div>
                 <div th:if="${#fields.hasErrors('firstName')}"
@@ -73,7 +73,7 @@
                     </ul>
                 </div>
                 <div style="margin-bottom: 25px" class="input-group">
-                    <input type="text" th:field="*{lastName}" placeholder="nazwisko" class="form-control"
+                    <input type="text" th:field="*{lastName}" placeholder="lastName" class="form-control"
                            th:errorclass="fieldError"/>
                 </div>
                 <div th:if="${#fields.hasErrors('lastName')}"
@@ -92,7 +92,7 @@
                         <li th:each="err : ${#fields.errors('email')}" th:text="'Email ' + ${err}"></li>
                     </ul>
                 </div>
-                <button type="submit" class="btn btn-primary">Zarejestruj</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </form>
         </div>
 
