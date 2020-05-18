@@ -54,3 +54,6 @@ ToDoApp uses <b><i>Thymeleaf</b></i> to manage templates. All images were downlo
 <b>Registration</b>
 
 ![](screenshots/second.png)
+<br>
+<b>Main page</b>
+![](screenshots/third.png)
